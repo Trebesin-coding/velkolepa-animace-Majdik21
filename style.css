@@ -1,0 +1,292 @@
+/*reset style vsemu:*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: inherit; /*font zkopirujrs po predchozim prvku*/
+}
+body {
+    min-width: 100vh; /*min-heigh= minimalni vyska, vh= viewport height*/
+}
+img {
+display: block;
+}
+
+:root{ /*lze zadat zkratky/ promene*/
+    --barva1: #b14d3c;
+    --barva2: #ef9469;
+    --barva3: #ffb159;
+    --barvatext: #924234;
+}
+
+
+
+header {
+    background-image: url("img/muffin.png");
+    min-height: 100vh;
+    background-size: cover; /*pokreje stranku*/
+    /*background-position: center center; /*zmensi se na velikost okna*/
+    /*background-color: rgba(0, 0, 0, 0.5); => rgb + alfa: sytost zatmaveni
+    background-blend-mode: multiply; => zatmaveni */
+    position: relative;
+}
+
+nav ul { /*nastav 'ul' v divu 'nav'*/
+    display: flex;
+    gap: 45px;
+    list-style-type: none;/*odstrani tecky*/
+}
+nav a {
+    text-decoration: none;/*odstrani podtrzeni*/
+    color:  #924234;
+    font-size: 1.4rem; /* 1em=16px; 1rem - v zavyslosti na zarizeni (responsive), idealni na fonty*/
+}
+
+.nadpis-hlav{
+    position: absolute;
+        left: 50vh;
+        top:100px;
+}
+.nadpis-hlav h1 {
+    font-size: 10.5rem;
+    font-family: Pacifico;
+    text-shadow: 4px 4px #b14d3c,
+                 8px 8px #ef9469,
+                 10px 10px #ffb159;
+
+    position: relative;
+}
+.nadpis-hlav span{
+    font-size: 3rem;
+    color: var(--barva1);
+    text-shadow: 4px 4px var(--barva2);
+
+    position: absolute;
+    rotate: -25deg;
+    bottom: 0px;
+
+
+    transition: font-size 5s ease 2s , font-weight 5s ease;
+    animation: huhu 5s infinite alternate;
+    scale: 1.2 1.2;
+
+}
+
+.nadpis-hlav span:hover{
+    font-size: 100px;
+    font-weight: 1000;
+
+}
+
+
+
+@keyframes huhu {
+    100%{
+        translate: 0px 20px;
+    }
+}
+
+.nadpis-hlav h2 {
+    font-size: 2rem;
+    font-family: Nunito;
+    color: var(--barvatext);
+    position: relative;
+        left: 330px;
+        top: 510px
+}
+
+
+.logo{
+    height: 110px;
+    position: absolute;
+        left: 20px;
+}
+    #l2{
+        position: absolute;
+            bottom: 10px;
+    }
+
+nav{
+    position: absolute;
+        right: 2%;
+    z-index: 1; /*je vepredu*/
+}
+
+.order{
+    border: 3px solid var(--barva1);
+    padding: 10px 24px;
+    font-family: Nunito;
+    border-radius: 500px;
+
+    position: absolute;
+        left: 90%;
+         translate: -50% 0; /*posun o 50% tlacitka zpet*/
+        bottom: 10%;
+
+    transition: 1s ease;/*jak dlouho bude probihat animace*/
+}
+.order a {
+    color: var(--barvatext);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.order:hover{
+    background-color: var(--barva1);
+    border-color: wheat;
+    scale: 1.1; /* zvetseni*/
+}
+.order a:hover{
+    color: wheat;
+}
+
+
+
+#about{
+    margin-top: 200px
+}
+.img-about{
+    height: 485px;
+    aspect-ratio: 1/1;
+    border-radius: 25px;
+}
+.wrapper-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 15rem;
+    gap: 4rem;
+}
+.text-about{
+    font-family: Nunito;
+    color: var(--barvatext);
+    
+}
+.text-about h2{
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.text-about p{
+    font-weight: 525;
+    font-size: 1.14rem;
+}
+
+
+
+#menu{
+    margin-top: 200px;
+}
+.text-menu{
+    font-weight: 525;
+    font-size: 0.8rem;
+    
+    position: absolute;
+        top: 205px;
+}
+.h3{
+    font-weight: 550;
+    font-size: 1.2rem;
+    position: absolute;
+        top: 175px;
+}
+
+.imgk{
+    position: relative;
+        top: -60px;
+}
+
+
+
+
+.karty{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+.kar{
+    height: 300px;
+    aspect-ratio: 2/2.3;
+    border: 3px solid var(--barva1);
+    background-color:#ffb25912;
+    border-radius: 25px;
+    padding: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    box-shadow: 0px 12px 28px 0px rgba(0, 0, 0, 0.2), 0px 2px 4px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+.kar:hover{
+    animation: flip 1s 0.2s;
+}
+@keyframes flip {
+    0%{
+        transform: perspective(1000px);
+    }
+    100%{
+        transform: perspective(1000px)
+        rotateY(360deg);
+    }
+}
+
+/* .menu-wrapper{
+    margin-top: 100px;
+    width: 70%;
+    position: relative;
+    margin-inline: auto;/*udela to stejny margin zprava a leva*
+} */
+
+#menu h2{
+    font-family: Nunito;
+    font-size: 4rem;
+    font-weight: bolder;
+    color: var(--barvatext);
+    margin-bottom: 80px;
+    
+    position: relative;
+        left: 370px;
+    
+}
+.button-menu{
+    border: 3px solid var(--barva1);
+    padding: 10px 24px;
+    font-family: Nunito;
+    border-radius: 500px;
+    margin-top: 40px ;
+    margin-bottom: 40px ;
+
+
+    position: absolute;
+        left: 45%;
+
+    transition: 1s ease;
+    animation: run 2s ease-in-out infinite alternate;
+}
+.button-menu a {
+    color: var(--barvatext);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.button-menu:hover{
+    background-color: var(--barva1);
+    border-color: wheat;
+    scale: 1.1; 
+}
+.button-menu a:hover{
+    color: wheat;
+}
+
+
+@keyframes run {
+    100%{
+        translate: 75px 0px;
+    }
+}
+
+
+
