@@ -87,6 +87,7 @@ nav a {
 }
 
 .nadpis-hlav h2 {
+    z-index: 2;
     width: 400px;
     font-size: 2rem;
     font-family: Nunito;
@@ -290,4 +291,30 @@ nav{
     }
 }
 
+
+.wrapper{
+    height: 200vh;
+    min-width: 100vw;
+    position: absolute;
+    z-index: 1;
+}
+.muffin{
+    position: absolute;
+    height: 6px;
+    aspect-ratio: 1/1;
+    border-radius: 500px;
+    background-color: white;
+    animation: jumpi 2s ease-in  10 forwards ;
+}
+
+@keyframes jumpi{
+    0%{
+        translate: 500px 0px;
+        opacity: 100%;
+    }
+    100%{
+        translate: 500px 830px;
+        opacity: 0%;
+    }
+}
 /*hii
