@@ -87,6 +87,7 @@ nav a {
 }
 
 .nadpis-hlav h2 {
+    width: 400px;
     font-size: 2rem;
     font-family: Nunito;
     color: var(--barvatext);
@@ -240,6 +241,7 @@ nav{
 } */
 
 #menu h2{
+    width: 800px;
     font-family: Nunito;
     font-size: 4rem;
     font-weight: bolder;
@@ -288,5 +290,4 @@ nav{
     }
 }
 
-
-
+/*hii
